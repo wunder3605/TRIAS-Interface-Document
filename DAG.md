@@ -71,4 +71,3 @@ update_data(data=None, extended_tag=None)
 |同步(SYNC)|SYNC服务会从DAG中PULL数据并推送给TM|
 |TM|TM 从DAG中拉取数据|
 |UTXO|TM 从DAG中拉取交易数据|
-|extended\_tag|主要是对已有的信息做标注，比如说某个信息已经“删除”等等|
