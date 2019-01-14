@@ -1,8 +1,8 @@
 # DAG 接口文档
 
-## HTTP 接口
+## 1. HTTP 接口
 
-### 1. 将数据Cache在DAG中
+### 1.1 将数据Cache在DAG中
 
 ```
 endpoint: save_data
@@ -18,7 +18,7 @@ curl http://host:port/save_data -X POST -H "Content-Type: application/json" \
 |data|数据是IPFS地址或者是数据本身由上层应用决定|
 |tag|标签，用于表明时间，服务类型等等|
 
-### 2. 获取数据的信息
+### 1.2 获取数据的信息
 
 ```
 endpoint: get_data
@@ -36,7 +36,7 @@ curl http://host:port/get_data -X GET -H "Content-Type: application/json" \
 |extended\_tag|主要是对已有的信息做标注，比如说某个信息已经“删除”等等|
 
 
-### 3. 将数据状态进行更新
+### 1.3 将数据状态进行更新
 
 ```
 endpoint: update_data
@@ -52,7 +52,7 @@ curl http://host:port/update_data -X PUT -H "Content-Type: application/json" \
 |extended\_tag|主要是对已有的信息做标注，比如说某个信息已经“删除”等等|
 
 
-## python SDK
+## 2. python SDK
 目前对外暴露的SDK仅支持python版本的，接口如下：
 ```
 TriasDAG(uri=None, seed=None)
@@ -61,10 +61,10 @@ get_data(data=None, tag=None, extended_tag=None)
 update_data(data=None, extended_tag=None)
 ```
 
-## 依赖的服务
+## 3. 依赖的服务
 目前不依赖任何服务。
 
-## 提供服务
+## 4. 提供服务
 |服务|说明|
 |-----|------|
 |APP|APP 会向DAG中缓存数据|
