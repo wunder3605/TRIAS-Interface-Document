@@ -1,1 +1,1 @@
-# TRIAS-Document-of-Interface
+# TRIAS Document of Interface
