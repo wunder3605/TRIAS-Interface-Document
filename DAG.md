@@ -2,8 +2,9 @@
 
 ## HTTP 接口
 
+### 1. 将数据Cache在DAG中
+
 ```
-目的：将数据Cache在DAG中。
 endpoint: save_data
 method: POST
 payload: json形式的数据，数据是IPFS地址或者是数据本身由上层应用决定。
@@ -21,8 +22,9 @@ curl http://host:port/save_data -X POST -H "Content-Type: application/json" \
 |data|数据是IPFS地址或者是数据本身由上层应用决定|
 |tag|标签，用于表明时间，服务类型等等|
 
+### 2. 获取数据的信息
+
 ```
-目的：获取数据的信息
 endpoint: get_data
 method: GET 
 payload: json形式的数据，如果提供数据内容则精确匹配，如果仅提供tag/extended_tag则模糊匹配。
@@ -38,9 +40,9 @@ curl http://host:port/get_data -X GET -H "Content-Type: application/json" \
 |extended\_tag|主要是对已有的信息做标注，比如说某个信息已经“删除”等等|
 
 
+### 3. 将数据状态进行更新
 
 ```
-目的：将数据状态进行更新
 endpoint: update_data
 method: PUT
 payload: json形式的数据，仅支持修改扩展标签
