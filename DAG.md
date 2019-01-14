@@ -8,10 +8,6 @@
 endpoint: save_data
 method: POST
 payload: json形式的数据，数据是IPFS地址或者是数据本身由上层应用决定。
-{
-    "data" : "数据内容",
-    "tag"  : "标签",
-}
 例子：
 curl http://host:port/save_data -X POST -H "Content-Type: application/json" \
     -d "{"data" : <data_info>, "tag" : <tag_info>}"
