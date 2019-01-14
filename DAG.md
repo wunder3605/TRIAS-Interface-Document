@@ -60,3 +60,15 @@ save_data(data=None, tag=None)
 get_data(data=None, tag=None, extended_tag=None)
 update_data(data=None, extended_tag=None)
 ```
+
+## 依赖的服务
+目前不依赖任何服务。
+
+## 提供服务
+|服务|说明|
+|-----|------|
+|APP|APP 会向DAG中缓存数据|
+|同步(SYNC)|SYNC服务会从DAG中PULL数据并推送给TM|
+|TM|TM 从DAG中拉取数据|
+|UTXO|TM 从DAG中拉取交易数据|
+|extended\_tag|主要是对已有的信息做标注，比如说某个信息已经“删除”等等|
